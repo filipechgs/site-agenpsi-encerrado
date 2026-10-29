@@ -1,0 +1,211 @@
+:root {
+    --dark-magenta: #a11692;
+    --light-magenta: #c13cb2;
+    --darker-magenta: #8a1280;
+    --jet: #333333;
+    --light-jet: #555555;
+    --eggshell: #efefef;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --page-width: 80%;
+    --mobile-page-width: 96%;
+    --box-shadow: 4px 4px 10px rgba(160, 160, 160, 0.3);
+    --button-shadow: 3px 3px 10px rgba(50, 0, 50, 0.3);
+    --border-radius: 4px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--eggshell);
+}
+
+h1, h2, h3 {
+    color: var(--darker-magenta);
+}
+
+p, li, b {
+    color: var(--jet);
+}
+
+a {
+    color: var(--dark-magenta);
+    font-weight: bold;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.navbar-backgroud {
+    background-color: var(--dark-magenta);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-block: 3px;
+    z-index: 1000;
+}
+
+.navbar-loged-out {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-magenta);
+    margin: auto;
+    width: var(--page-width);
+}
+
+#nav-bar-logo {
+    display: block;
+    width: 150px;
+    height: 50px;
+}
+
+.center-main-box {
+    display: block;
+    margin: 0 auto;
+    width: var(--page-width);
+    min-height: 80em;
+}
+
+.center-main-box::before {
+    content: "";
+    display: block;
+    height: 84px;
+}
+
+.center-main-box::after {
+    content: "";
+    display: block;
+    height: 5em;
+}
+
+.login-box {
+    background-color: white;
+    width: 100%;
+    max-width: 440px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.login-migration {
+    margin-bottom: 8px;
+}
+
+.login-migration h2 {
+    margin: 0 0 16px;
+    font-size: 1.45rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.login-migration p,
+.login-migration li {
+    color: var(--jet);
+    line-height: 1.45;
+    text-align: left;
+}
+
+.login-migration ol {
+    margin: 12px 0 4px;
+    padding-left: 1.2rem;
+}
+
+.login-migration li {
+    margin: 8px 0;
+}
+
+.login-box a.sinclin-redirect,
+.login-box a.sinclin-know {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    padding: 12px 15px;
+    box-shadow: var(--button-shadow);
+    font-weight: 600;
+}
+
+.login-box a.sinclin-redirect {
+    background-color: var(--light-magenta);
+    color: white;
+    margin: 18px 0 8px;
+}
+
+.login-box a.sinclin-redirect:hover {
+    background-color: var(--dark-magenta);
+    color: white;
+    text-decoration: none;
+}
+
+.login-box a.sinclin-know {
+    background-color: white;
+    color: var(--dark-magenta);
+    border: 1px solid var(--dark-magenta);
+    margin: 12px 0 8px;
+}
+
+.login-box a.sinclin-know:hover {
+    background-color: var(--light-magenta);
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    margin: 0;
+    padding-top: 4em;
+    background-color: var(--dark-magenta);
+    text-align: center;
+}
+
+#footer-logo {
+    width: 8em;
+    height: auto;
+}
+
+.white-text {
+    color: #fff8f0;
+}
+
+footer a,
+.footer-link {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+footer a:hover,
+.footer-link:hover {
+    color: white;
+}
+
+@media screen and (max-width: 1410px) {
+    .center-main-box,
+    .navbar-loged-out {
+        width: var(--mobile-page-width);
+    }
+
+    .navbar-backgroud {
+        padding: 10px;
+    }
+
+    .login-box {
+        width: 85%;
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+}
